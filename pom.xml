@@ -1,0 +1,167 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>NewProject</groupId>
+  <artifactId>NewProject</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <!--
+  this is used if we get version not match in mvn cmd prompt
+  <properties> 
+  <maven.compiler.source>1.8</maven.compiler.source> 
+  <maven.compiler.target>1.8</maven.compiler.target> 
+  </properties>
+  -->
+  <dependencies>
+  
+  <dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.7.2</version>
+</dependency>
+
+
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>4.1.2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>4.1.2</version>
+</dependency>
+<!-- this driver is used to download webdriver automatically-->
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>3.8.1</version>
+</dependency>
+<!-- this will helps to handle all the files realted drivers-->
+<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+<dependency>
+    <groupId>commons-io</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.11.0</version>
+</dependency>
+
+<!-- this is unit testing tool-->
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.4.0</version> <!-- remove scope here while running using mvn or outside eclipse-->   
+</dependency>
+
+
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-edge-driver -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-edge-driver</artifactId>
+    <version>4.7.2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.1.0</version>
+</dependency>
+<!-- 
+if we get compilation failed while using mvn cmd prompt
+<dependency>
+ <groupId>org.projectlombok</groupId> 
+ <artifactId>lombok</artifactId> 
+ <version>1.18.24</version> 
+ <scope>provided</scope> 
+ </dependency>
+
+  -->
+  
+  <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.9</version>
+</dependency>
+   
+   
+  
+  </dependencies>
+  
+  <profiles>
+  
+  <profile>
+  <id>regionalReg</id>
+   
+ <build>
+  <plugins>
+    
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng_RegressionSuite.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+   
+</plugins>
+  </build>
+   </profile>
+   
+    <profile>
+  <id>batch</id>
+   
+ <build>
+  <plugins>
+    
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng_BatchExecution.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+   
+</plugins>
+  </build>
+   </profile>
+   
+    <profile>
+  <id>readdata</id>
+   
+ <build>
+  <plugins>
+    
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testngreadDataFromCMDLine.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+   
+</plugins>
+  </build>
+   </profile>
+   
+   
+   
+  </profiles>
+  
+   
+  
+  
+</project>
