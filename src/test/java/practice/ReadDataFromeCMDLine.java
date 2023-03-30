@@ -18,5 +18,7 @@ public void readData()
 	
 	String PASSWORD = System.getProperty("password");
 	System.out.println(PASSWORD);
+	
+	System.out.println("------- ");
 }
 }
