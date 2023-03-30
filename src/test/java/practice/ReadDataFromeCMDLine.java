@@ -20,5 +20,6 @@ public void readData()
 	System.out.println(PASSWORD);
 	
 	System.out.println("------- ");
+	System.out.println("--------");
 }
 }
