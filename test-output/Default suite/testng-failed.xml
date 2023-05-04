@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vtiger.ContactsTest.ContactWithOrganizationTest">
+      <class name="practice.Calendar_practice_prog">
         <methods>
-          <include name="ContactWithOrganizationtest"/>
-          <include name="acConfig"/>
-          <include name="asConfig"/>
-          <include name="bsConfig"/>
-          <include name="bmConfig"/>
-          <include name="amConfig"/>
-          <include name="bcConfig"/>
+          <include name="calendar"/>
         </methods>
-      </class> <!-- vtiger.ContactsTest.ContactWithOrganizationTest -->
+      </class> <!-- practice.Calendar_practice_prog -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
