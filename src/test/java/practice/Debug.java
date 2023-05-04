@@ -12,5 +12,5 @@ public class Debug {
 		System.out.println("b="+b);
 
 	}
-//committing
+//commit
 }
