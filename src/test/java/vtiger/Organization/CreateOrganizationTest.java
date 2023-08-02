@@ -14,7 +14,7 @@ import vtiger.ObjectRepository.HomePage;
 import vtiger.ObjectRepository.OrganizationInfoPage;
 import vtiger.ObjectRepository.OrganizationPage;
 @Listeners(vtiger.GenericUtilities.ListenersImplementation.class)
-public class CreateOrganizationTest extends BaseClass{
+public class CreateOrganizationTest extends BaseClass{    
 @Test(groups="SmokeSuite")
 public void createOrganizationTest() throws IOException, InterruptedException{
 		

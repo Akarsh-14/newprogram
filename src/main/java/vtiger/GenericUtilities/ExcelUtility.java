@@ -79,6 +79,7 @@ public class ExcelUtility {
 	public Object[][] readMultipleData(String sheetname) throws EncryptedDocumentException, IOException
 	{
 		FileInputStream fis=new FileInputStream(IConstantUtilities.ExcelFilePath);
+		
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sh = wb.getSheet(sheetname);
 	    int lastRow = sh.getLastRowNum();

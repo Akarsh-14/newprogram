@@ -98,6 +98,7 @@ public class contactwithorganization {
 				
 
 				//step:6 verificaton
+			
 				ContactsInfoPage cip=new ContactsInfoPage(driver);
 				String actualdata = cip.getContactHeaders();
 			

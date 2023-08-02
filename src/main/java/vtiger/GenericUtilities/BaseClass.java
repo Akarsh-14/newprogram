@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -41,13 +42,16 @@ public class BaseClass {
 	@BeforeClass(groups={"SmokeSuite","ReggressionSuite"})
 	public void bcConfig(/*String BROWSER*/) throws IOException  //string added for cross browser
 	{
+		ChromeOptions co=new ChromeOptions();
+		co.addArguments("--remote-allow-origins=*");
+		
 		String URL = putil.readDataFromPropertyFile("url");
 		String BROWSER = putil.readDataFromPropertyFile("browser");  //cmted for cross browser
 		
 		// Step 2: Launch the browser - runtime polymorphism
 		if (BROWSER.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(co);
 		} else if (BROWSER.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();

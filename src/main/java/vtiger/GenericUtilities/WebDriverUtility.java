@@ -18,7 +18,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * This class consists of generic methods related to Webdriver actions
+ * This class consists of generic methods related to WebDriver actions
  * @author akarsh
  *
  */

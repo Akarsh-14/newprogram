@@ -33,7 +33,7 @@ public WebElement getSubmitbtn() {
 }
 //Business Libraries -generic method specific to current project
 /**
- * This method will login to app with username and password
+ * This method will login to application with username and password
  * @param Username
  * @param Password
  */
