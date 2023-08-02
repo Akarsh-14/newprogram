@@ -22,6 +22,6 @@ public class sample {
 	Thread.sleep(3000);
 	driver.findElement(By.xpath("//a[text()='Hair Color']")).click();
 	//comit
-
+        //pull
 }
 	}
